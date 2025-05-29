@@ -27,6 +27,7 @@ async function loadNote(id) {
   const res = await fetch(note.file);
   const md = await res.text();
   noteContent.innerHTML = marked.parse(md);
+  generateToc(noteContent); // This will now call window.generateToc
 
   // Add navigation buttons
   let navButtonsDiv = noteContent.querySelector('.navigation-buttons');
