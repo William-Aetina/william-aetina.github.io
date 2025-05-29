@@ -1,8 +1,8 @@
 // main.js
 // 筆記檔案清單
 const notes = [
-  { id: 'intro', title: '入門介紹', file: 'notes/intro.md' },
-  { id: 'js-array', title: 'JavaScript 陣列', file: 'notes/js-array.md' },
+  { id: 'intro', title: '入門介紹', file: 'notes/intro.md', prev: null, next: 'js-array' },
+  { id: 'js-array', title: 'JavaScript 陣列', file: 'notes/js-array.md', prev: 'intro', next: null },
 ];
 
 // DOM 元素
@@ -27,6 +27,37 @@ async function loadNote(id) {
   const res = await fetch(note.file);
   const md = await res.text();
   noteContent.innerHTML = marked.parse(md);
+
+  // Add navigation buttons
+  let navButtonsDiv = noteContent.querySelector('.navigation-buttons');
+  if (!navButtonsDiv) {
+    navButtonsDiv = document.createElement('div');
+    navButtonsDiv.className = 'navigation-buttons mt-4 pt-4 border-t border-gray-300 dark:border-gray-600 flex justify-between';
+    noteContent.appendChild(navButtonsDiv);
+  }
+  navButtonsDiv.innerHTML = ''; // Clear existing buttons
+
+  if (note.prev) {
+    const prevLink = document.createElement('a');
+    prevLink.href = `#${note.prev}`;
+    prevLink.textContent = '← Previous';
+    prevLink.className = 'text-blue-500 hover:underline';
+    navButtonsDiv.appendChild(prevLink);
+  } else {
+    // Add an empty span to maintain layout if no prev button
+    navButtonsDiv.appendChild(document.createElement('span'));
+  }
+
+  if (note.next) {
+    const nextLink = document.createElement('a');
+    nextLink.href = `#${note.next}`;
+    nextLink.textContent = 'Next →';
+    nextLink.className = 'text-blue-500 hover:underline';
+    navButtonsDiv.appendChild(nextLink);
+  } else {
+    // Add an empty span to maintain layout if no next button
+    navButtonsDiv.appendChild(document.createElement('span'));
+  }
 }
 
 // 處理 hash 導航
