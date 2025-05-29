@@ -229,7 +229,7 @@ GitHub Pages 支援一系列官方和社群提供的 Jekyll 佈景主題。
 如果你想更深入地客製化網站外觀，可以：
 
 *   **覆寫佈景主題的版面配置 (Layouts):** 在你的儲存庫中建立一個 `_layouts` 資料夾，並放入與佈景主題中同名的版面配置檔案 (例如 `default.html`, `post.html`)。Jekyll 會優先使用你提供的版本。
-*   **建立自己的包含片段 (Includes):** 在 `_includes` 資料夾中建立可重複使用的 HTML 片段 (例如頁首 `header.html`、頁尾 `footer.html`)，然後在版面配置或其他頁面中使用 `{% include footer.html %}` 來引入它們。
+*   **建立自己的包含片段 (Includes):** 在 `_includes` 資料夾中建立可重複使用的 HTML 片段 (例如頁首 `header.html`、頁尾 `footer.html`)，然後在版面配置或其他頁面中來引入它們。
 
 這部分需要對 HTML、CSS 和 Liquid 模板語言有進一步的了解。
 
