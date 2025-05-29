@@ -1,20 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>template</title>
-<script src="js/tailwind-3.4.16.min.js"></script>
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notes</title>
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/prose.css" rel="stylesheet">
+  <script src="js/tailwind-3.4.16.min.js"></script>
 </head>
-<body class="bg-gray-200 flex container items-center mx-auto justify-center">
-  <div class="bg-white p-6 rounded shadow-md container">
-    <h2 class="text-2xl mb-4">template</h2>
-    <div class="flex gap-4">
-      content
+<body class="bg-gray-50 dark:bg-gray-900 min-h-screen transition-colors dark">
+  <div class="container mx-auto px-4 py-6">
+    <header class="flex items-center justify-between mb-6">
+      <h1 class="text-2xl font-bold text-gray-800 dark:text-gray-100">🧩 Notes</h1>
+    </header>
+    <div class="flex flex-col md:flex-row gap-6 text-gray-800 dark:text-gray-100">
+      <aside class="md:w-1/4">
+        <input id="search" type="text" placeholder="Search..." class="w-full mb-3 px-2 py-1 rounded border border-gray-300 dark:bg-gray-800 dark:text-gray-100">
+        <nav>
+          <ul id="note-list" class="space-y-2"></ul>
+        </nav>
+      </aside>
+      <main class="md:w-3/4 bg-white dark:bg-gray-800 rounded shadow p-4 min-h-[300px]">
+        <article id="note-content" class="prose dark:prose-invert max-w-none"></article>
+      </main>
     </div>
   </div>
-
+  <script src="lib/marked.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
-<script src="js/main.js"></script>
 </html>

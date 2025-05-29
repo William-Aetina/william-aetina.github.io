@@ -1,3 +1,10 @@
+/* Hide scrollbars for aside on mobile */
+@media (max-width: 768px) {
+  aside {
+    overflow-x: auto;
+  }
+}
+
 * {
   font-family: 'Courier New', Courier, monospace;
   font-size: 14px;

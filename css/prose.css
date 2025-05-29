@@ -1,0 +1,143 @@
+
+/* Custom markdown base elements */
+.prose {
+  max-width: 100%;
+}
+/* Markdown headings */
+.prose h1 {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 1em 0 0.5em 0;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 0.3em;
+}
+.prose h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 1em 0 0.5em 0;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 0.2em;
+}
+.prose h3 {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 1em 0 0.5em 0;
+}
+.prose h4,
+.prose h5,
+.prose h6 {
+  font-weight: bold;
+  margin: 1em 0 0.5em 0;
+}
+
+/* Bold, italic, underline */
+.prose b,
+.prose strong {
+  font-weight: bold;
+}
+.prose i,
+.prose em {
+  font-style: italic;
+}
+.prose u {
+  text-decoration: underline;
+}
+
+/* Paragraphs */
+.prose p {
+  margin: 0.5em 0;
+  line-height: 1.7;
+}
+
+/* Lists */
+.prose ul,
+.prose ol {
+  margin: 0.5em 0 0.5em 2em;
+  padding: 0;
+}
+.prose ul {
+  list-style-type: disc;
+}
+.prose ol {
+  list-style-type: decimal;
+}
+.prose li {
+  margin: 0.2em 0;
+}
+
+/* Blockquote */
+.prose blockquote {
+  border-left: 4px solid #d1d5db;
+  background: #f9fafb;
+  color: #6b7280;
+  margin: 1em 0;
+  padding: 0.5em 1em;
+  font-style: italic;
+}
+
+/* Code */
+.prose code {
+  background: #f3f4f6;
+  color: #d97706;
+  padding: 0.1em 0.4em;
+  border-radius: 4px;
+  font-family: 'Fira Mono', 'Courier New', Courier, monospace;
+  font-size: 13px;
+}
+.prose pre {
+  background: #1e293b;
+  color: #f1f5f9;
+  padding: 1em;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin: 1em 0;
+  font-family: 'Fira Mono', 'Courier New', Courier, monospace;
+  font-size: 13px;
+}
+.prose pre code {
+  background: none;
+  color: inherit;
+  padding: 0;
+  font-size: inherit;
+}
+
+/* Links */
+.prose a {
+  color: #2563eb;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+.prose a:hover {
+  color: #1d4ed8;
+}
+
+/* Images */
+.prose img {
+  max-width: 100%;
+  border-radius: 4px;
+  margin: 0.5em 0;
+}
+
+/* Tables */
+.prose table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1em 0;
+}
+.prose th,
+.prose td {
+  border: 1px solid #e5e7eb;
+  padding: 0.5em 1em;
+  text-align: left;
+}
+.prose th {
+  background: #f3f4f6;
+  font-weight: bold;
+}
+
+/* Horizontal rule */
+.prose hr {
+  border: none;
+  border-top: 1px solid #e5e7eb;
+  margin: 2em 0;
+}
