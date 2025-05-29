@@ -56,6 +56,25 @@ noteList.addEventListener('click', e => {
 // hash 變化時載入
 window.addEventListener('hashchange', handleHash);
 
+// Dark mode functionality
+function toggleTheme() {
+  const html = document.documentElement;
+  html.classList.toggle('dark');
+  if (html.classList.contains('dark')) {
+    localStorage.setItem('theme', 'dark');
+  } else {
+    localStorage.setItem('theme', 'light');
+  }
+}
+
+// Load theme from localStorage
+const currentTheme = localStorage.getItem('theme');
+if (currentTheme === 'dark') {
+  document.documentElement.classList.add('dark');
+} else if (currentTheme === 'light') {
+  document.documentElement.classList.remove('dark');
+}
+
 // 初始化
 renderNoteList();
 handleHash();

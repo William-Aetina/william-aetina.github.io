@@ -12,3 +12,7 @@
 input[type="text"], textarea {
   border: 1px solid #ddd;
 }
+
+.dark input[type="text"], .dark textarea {
+  border: 1px solid #555; /* Dark mode border color */
+}
