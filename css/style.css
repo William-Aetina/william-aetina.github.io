@@ -12,3 +12,33 @@
 input[type="text"], textarea {
   border: 1px solid #ddd;
 }
+
+.navigation-buttons {
+  margin-top: 1rem; /* mt-4 */
+  padding-top: 1rem; /* pt-4 */
+  border-top: 1px solid #e5e7eb; /* border-gray-300 */
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Styling for dark mode can be added if necessary, matching dark:border-gray-600 */
+/* For example: */
+/* .dark .navigation-buttons { */
+/*   border-top-color: #4b5563; /* border-gray-600 */
+/* } */
+/* For now, let's add the dark mode example directly as there's no other dark mode setup */
+@media (prefers-color-scheme: dark) {
+  .navigation-buttons {
+    border-top-color: #4b5563; /* border-gray-600 */
+  }
+}
+
+
+.navigation-buttons a {
+  color: #3b82f6; /* text-blue-500 */
+  text-decoration: none;
+}
+
+.navigation-buttons a:hover {
+  text-decoration: underline;
+}
